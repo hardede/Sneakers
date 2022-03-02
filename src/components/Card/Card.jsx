@@ -60,7 +60,7 @@ const Card = ({
           <div className={styles.sneakersBottom}>
             <div className="d-flex flex-column">
               <span>Цена:</span>
-              <p>{price} руб.</p>
+              <p>{price} грн.</p>
             </div>
             {onPlus && (
               <img
