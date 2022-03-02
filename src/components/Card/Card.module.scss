@@ -1,0 +1,63 @@
+.card {
+  margin: 0 25px 40px 25px;
+
+  padding: 20px 30px 35px 30px;
+  width: 220px;
+  border: 1px solid #f3f3f3;
+  border-radius: 40px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  .plus {
+    cursor: pointer;
+  }
+
+  &:hover {
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+
+  .favorite {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .sneakers__title {
+    margin: 0;
+    padding: 14px 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  .sneakersBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+      span {
+        font-size: 11px;
+        line-height: 13px;
+        font-weight: 500;
+        color: #bdbdbd;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .button {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}

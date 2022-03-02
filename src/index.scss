@@ -1,0 +1,231 @@
+* body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #e7f6ff;
+}
+
+* {
+  font-family: "Inter", system-ui;
+}
+
+.wrapper {
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 40px;
+}
+
+header {
+  border-bottom: 1px solid #f4f4f4;
+  img {
+    margin-right: 15px;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.content {
+  padding-top: 40px;
+  h1 {
+    margin: 0;
+  }
+}
+
+.sneakers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-block {
+  display: flex;
+  width: 250px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  position: relative;
+
+  .clear {
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    width: 18px;
+    height: 18px;
+  }
+
+  input {
+    border: 0;
+    padding: 16px 13px;
+    font-size: 14px;
+  }
+}
+
+
+
+.cartItem {
+  padding: 30px 20px;
+  margin: 30px 0 20px 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .cartItemImg {
+    height: 70px;
+    width: 70px;
+    background-size: contain;
+    background-position: 0 -3px;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .sneakers-name {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+  }
+
+  .removeBtn {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.cartTotalBlock {
+  ul {
+    display: block;
+    margin-bottom: 40px !important;
+
+    li {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+
+      div {
+        flex: 1;
+        height: 1px;
+        border-bottom: 1px dashed #dfdfdf;
+        position: relative;
+        top: -4px;
+        margin: 0 7px;
+      }
+    }
+  }
+
+  .greenButton {
+    position: relative;
+
+    &:disabled {
+      animation: button-loading 0.6s ease-in-out infinite infinite;
+    }
+
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      transition: transform 0.15s ease-in-out;
+    }
+  }
+}
+
+.greenButton {
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+
+  &:disabled {
+    background-color: #a8a7a7;
+    cursor: default;
+  }
+
+  &:hover {
+    background: lighten($color: #9dd558, $amount: 10%);
+  }
+
+  &:active {
+    background: darken($color: #9dd558, $amount: 10%);
+  }
+}
+
+.price {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.emptyDrawer {
+  text-align: center;
+
+  h3 {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .sub-title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.4;
+  }
+
+  .greenButton {
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 268px;
+      top: 20px;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@keyframes button-loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
